@@ -1,0 +1,21 @@
+{
+  "name": "algophysics-150",
+  "version": "0.0.1",
+  "private": true,
+  "description": "M0 PoC — Two Sum physics level with a Claude tutor",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "server": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "matter-js": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.19.7",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}

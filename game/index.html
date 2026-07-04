@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlgoPhysics 150 — Two Sum</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>AlgoPhysics&nbsp;150 · <span class="dim">Two Sum 神殿</span></h1>
+        <div id="hud">
+          <div class="stat">目標和 <b id="target">?</b></div>
+          <div class="stat">已配對 <b id="pairs">0</b></div>
+          <div class="stat">操作步數 <b id="moves">0</b></div>
+        </div>
+      </header>
+
+      <main>
+        <div id="stage"></div>
+
+        <aside id="tutor-panel">
+          <h2>🤖 AI 導師</h2>
+          <div id="tutor-log">
+            <p class="tutor-msg">
+              點兩顆球選出一對。若兩數之和 = 目標，它們會互相吸引並湮滅；
+              否則會彼此彈開。卡住的話按「請導師給提示」。
+            </p>
+          </div>
+          <button id="hint-btn">請導師給提示</button>
+          <button id="reset-btn" class="secondary">重設關卡</button>
+        </aside>
+      </main>
+
+      <footer>
+        <span class="dim">M0 PoC — matter.js 物理 × Claude 導師。物理層負責表現，離散狀態機負責正確性判定。</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
