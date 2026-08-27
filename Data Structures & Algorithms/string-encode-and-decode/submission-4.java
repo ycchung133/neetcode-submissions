@@ -1,0 +1,22 @@
+class Solution {
+
+    public String encode(List<String> strs) {
+        String result = "";
+        for (String s : strs) {
+            result += s.length() + "#" + s;
+        }
+        return result;
+    }
+
+    public List<String> decode(String str) {
+        int i = 0;
+        List<String> result = new ArrayList<>();
+        while (i < str.length()) {
+            int j = str.indexOf('#', i);
+            int length = Integer.parseInt(str.substring(i, j));
+            i = j + length + 1;
+            result.add(str.substring(j + 1, j + length + 1));
+        }
+        return result;
+    }
+}
